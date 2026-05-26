@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies
+
+  pre_build:
+    commands:
+      - echo Preparing build environment
+
+  build:
+    commands:
+      - echo Build started
+      - mkdir -p output
+      - cp index.html output/
+
+  post_build:
+    commands:
+      - echo Build completed successfully
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: output
