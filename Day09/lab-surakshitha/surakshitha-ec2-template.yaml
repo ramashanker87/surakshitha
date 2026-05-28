@@ -4,7 +4,7 @@ Description: Simple EC2 Deployment using CloudFormation
 
 Resources:
 
-  RamaSecurityGroup:
+  SurakshithaSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Allow SSH and HTTP
@@ -30,7 +30,7 @@ Resources:
       KeyName: surakshitha-keypair
 
       SecurityGroups:
-        - !Ref RamaSecurityGroup
+        - !Ref SurakshithaSecurityGroup
 
       Tags:
         - Key: Name
