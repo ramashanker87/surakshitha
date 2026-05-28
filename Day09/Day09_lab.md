@@ -242,7 +242,7 @@ Day09-CloudFormation-Server
 # Step 9 – Connect to EC2
 
 ```bash
-ssh -i mykey.pem ec2-user@<PUBLIC-IP>
+ssh -i surakshitha-keypair.pem ec2-user@54.175.79.58
 ```
 
 ---
