@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: Multi-environment CloudFormation template
+
+Parameters:
+  Environment:
+    Type: String
+    AllowedValues:
+      - dev
+      - test
+      - prod
+    Description: Deployment environment
+
+Resources:
+  EnvironmentBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${Environment}-demo-bucket-${AWS::AccountId}"
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+
+        - Key: ManagedBy
+          Value: CloudFormation
+
+Outputs:
+  BucketName:
+    Description: Name of the created S3 bucket
+    Value: !Ref EnvironmentBucket
+
+  BucketArn:
+    Description: ARN of the S3 bucket
+    Value: !GetAtt EnvironmentBucket.Arn
