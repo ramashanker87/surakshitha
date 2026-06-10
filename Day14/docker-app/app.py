@@ -5,7 +5,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("Content-type", "text/plain")
         self.end_headers()
-        self.wfile.write(b"Hi Surakshitha-Lab-Day14\n")
+        self.wfile.write(b"Hi SurakshithaLab-Day14\n")
 
 server = HTTPServer(("0.0.0.0", 8080), Handler)
 print("Server running on port 8080")
