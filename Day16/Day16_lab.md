@@ -32,7 +32,7 @@ Participants will:
 Verify image exists in ECR:
 
 ```bash
-aws ecr list-images --repository-name hello-ecr --region us-east-1 --profile devops
+aws ecr list-images --repository-name surakshitha-ecr --region us-east-1 --profile devops
 ```
 
 Record:
@@ -86,7 +86,7 @@ Name:
 hello-app
 
 Image:
-ACCOUNT_ID.dkr.ecr.eu-north-1.amazonaws.com/hello-ecr:v2
+ACCOUNT_ID.dkr.ecr.eu-north-1.amazonaws.com/surakshitha-ecr:v2
 
 Port:
 8080
