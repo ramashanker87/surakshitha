@@ -1,5 +1,5 @@
 # Day 15 – 05-Jun-2026 (Friday)
-# Module 3 – Containerization & Registry Management
+# Module 3 –  Containerization & Registry Management
 
 ## Lab: Multi-Stage Builds & Amazon ECR Publishing
 
