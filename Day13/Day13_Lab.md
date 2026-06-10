@@ -129,7 +129,7 @@ Add:
 
 ```hcl
 resource "aws_s3_bucket" "insecure_bucket" {
-  bucket = "yourname-insecure-demo-bucket-20260603"
+  bucket = "surakshitha-insecure-demo-bucket-20260603"
 
   tags = {
     Name = "InsecureBucket"
@@ -251,7 +251,7 @@ Update S3 configuration:
 
 ```hcl
 resource "aws_s3_bucket" "secure_bucket" {
-  bucket = "yourname-secure-demo-bucket-20260603"
+  bucket = "surakshitha-secure-demo-bucket-20260603"
 
   tags = {
     Name = "SecureBucket"
