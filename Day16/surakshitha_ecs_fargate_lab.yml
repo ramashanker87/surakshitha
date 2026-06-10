@@ -42,9 +42,7 @@ Parameters:
 
   ContainerImage:
     Type: String
-    Description: >
-      Full container image URI from Amazon ECR.
-      Example: 123456789012.dkr.ecr.eu-north-1.amazonaws.com/hello-ecr:v2
+    Description: 386757865964.dkr.ecr.us-east-1.amazonaws.com/surakshitha-ecr:v2
 
   ContainerPort:
     Type: Number

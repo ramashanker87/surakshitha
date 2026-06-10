@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: surakshitha-ecr-app
+  namespace: day17-surakshitha
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: surakshitha-ecr-app
+  template:
+    metadata:
+      labels:
+        app: surakshitha-ecr-app
+    spec:
+      containers:
+        - name: surakshitha-ecr-container
+          image: 386757865964.dkr.ecr.us-east-1.amazonaws.com/surakshitha-ecr:v2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

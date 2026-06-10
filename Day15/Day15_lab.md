@@ -45,7 +45,7 @@ CMD ['python','app.py']
 Build:
 
 ```bash
-docker build -t hello-ecr:v1 .
+docker build -t surakshitha-ecr:v1 .
 ```
 
 Check image size:
@@ -75,7 +75,7 @@ CMD ["python","app.py"]
 Build:
 
 ```bash
-docker build -f Dockerfile.multi -t hello-ecr:v2 .
+docker build -f Dockerfile.multi -t surakshitha-ecr:v2 .
 ```
 
 Compare image sizes.
@@ -85,7 +85,7 @@ Compare image sizes.
 ## Lab 4: Run Container
 
 ```bash
-docker run -d --name hello-app -p 8080:8080 hello-ecr:v2
+docker run -d --name hello-app -p 8080:8080 surakshitha-ecr:v2
 curl http://localhost:8080
 ```
 
@@ -95,7 +95,7 @@ curl http://localhost:8080
 
 ```bash
 aws configure
-aws sts get-caller-identity
+aws sts get-caller-identity --profile devops
 ```
 
 ---
@@ -104,7 +104,7 @@ aws sts get-caller-identity
 
 ```bash
 aws ecr create-repository \
---repository-name hello-ecr \
+--repository-name surakshitha-ecr \
 --region us-east-1 --profile devops
 ```
 
@@ -126,8 +126,8 @@ docker login \
 ## Lab 8: Tag Image
 
 ```bash
-docker tag hello-ecr:v2 \
-386757865964.dkr.ecr.us-east-1.amazonaws.com/hello-ecr:v2
+docker tag surakshitha-ecr:v2 \
+386757865964.dkr.ecr.us-east-1.amazonaws.com/surakshitha-ecr:v2
 ```
 
 ---
@@ -136,7 +136,7 @@ docker tag hello-ecr:v2 \
 
 ```bash
 docker push \
-386757865964.dkr.ecr.us-east-1.amazonaws.com/hello-ecr:v2
+386757865964.dkr.ecr.us-east-1.amazonaws.com/surakshitha-ecr:v2
 ```
 
 ---
@@ -145,7 +145,7 @@ docker push \
 
 ```bash
 aws ecr list-images \
---repository-name hello-ecr \
+--repository-name surakshitha-ecr \
 --region us-east-1 --profile devops
 ```
 
@@ -155,7 +155,7 @@ aws ecr list-images \
 
 ```bash
 docker pull \
-386757865964.dkr.ecr.us-east-1.amazonaws.com/hello-ecr:v2
+386757865964.dkr.ecr.us-east-1.amazonaws.com/surakshitha-ecr:v2
 ```
 
 ---
@@ -164,7 +164,7 @@ docker pull \
 
 ```bash
 docker run -d -p 8081:8080 \
-386757865964.dkr.ecr.us-east-1.amazonaws.com/hello-ecr:v2
+386757865964.dkr.ecr.us-east-1.amazonaws.com/surakshitha-ecr:v2
 ```
 
 Verify:

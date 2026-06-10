@@ -2,8 +2,8 @@ version: "3.8"
 
 services:
   hello-app:
-    image: hello-ecr:v2
-    container_name: hello-app
+    image: surakshitha-ecr:v2
+    container_name: app-surakshitha
     ports:
       - "8080:8080"
 #    environment:
