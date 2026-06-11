@@ -66,7 +66,7 @@ aws sts get-caller-identity --profile devops
 
 ```bash
 aws ecr describe-repositories \
-  --repository-names rama-ecr \
+  --repository-names surakshitha-ecr \
   --region us-east-1 \
   --profile devops
 ```
